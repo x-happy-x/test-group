@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="group [marketplace]" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.lognex.MainCommand" />
+    <module name="test-group" />
+    <option name="PROGRAM_PARAMETERS" value="-g ./out/classes/marketplace.json -c ./config/marketplace.yml -o ./out/result/marketplace.json" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.lognex.config.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

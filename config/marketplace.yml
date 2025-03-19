@@ -1,0 +1,43 @@
+groups:
+  - name: "Контрактные (consumer)"
+    superClasses:
+      - "com.lognex.zeus.cdc.ZeusCdcTestBase"
+    methodAnnotation:
+      name: "au.com.dius.pact.core.model.annotations.Pact"
+      ignoreParameters: true
+
+  - name: "Контрактные (provider)"
+    classAnnotation:
+      name: "org.junit.runner.RunWith"
+      ignoreParameters: false
+      parameters:
+        value: "PactRunner.class"
+    methodAnnotation:
+      name: "au.com.dius.pact.provider.junitsupport.State"
+      ignoreParameters: true
+
+  - name: "UIT"
+    superClasses:
+      - "com.lognex.ui.core.TestBase"
+    methodAnnotationAnyOf:
+      - name: "org.junit.Test"
+        ignoreParameters: true
+      - name: "org.junit.jupiter.api.Test"
+        ignoreParameters: true
+
+  - name: "Интеграционные"
+    superClasses:
+      - "com.lognex.partnercabinet.BaseSpringTest"
+      - "com.lognex.zeus.backend.main.tests.BaseDBTest"
+    methodAnnotationAnyOf:
+      - name: "org.junit.Test"
+        ignoreParameters: true
+      - name: "org.junit.jupiter.api.Test"
+        ignoreParameters: true
+
+  - name: "Юнит"
+    methodAnnotationAnyOf:
+      - name: "org.junit.Test"
+        ignoreParameters: true
+      - name: "org.junit.jupiter.api.Test"
+        ignoreParameters: true
