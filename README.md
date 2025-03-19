@@ -7,4 +7,4 @@
 
 Примеры для marketplace уже есть в файлах (config, out) и run configurations настроены для IDEA.
 
-На МС не работает, нужно доделывать
+На МС не работает, нужно доделывать или можно строить по allure отчётам (см. https://github.com/x-happy-x/allure-test-group)
